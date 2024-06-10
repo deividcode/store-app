@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Light";
+    src: url(./assets/fonts/BeatriceHeadlineTRIAL-Light-BF64829e8c315af.woff)
+      format("woff");
+  }
+  @font-face {
+    font-family: "Regular";
+    src: url(./assets/fonts/BeatriceHeadlineTRIAL-Regular-BF64829e8c11cf2.woff)
+      format("woff");
+  }
+
+  @font-face {
+    font-family: "Medium";
+    src: url(./assets/fonts/BeatriceHeadlineTRIAL-Medium-BF64829e8c4b24f.woff)
+      format("woff");
+  }
+
+  @font-face {
+    font-family: "Bold";
+    src: url(./assets/fonts/BeatriceHeadlineTRIAL-Bold-BF64829e8cbc444.woff)
+      format("woff");
+  }
+
+  html {
+    font-family: "Regular", system-ui, sans-serif;
+  }
+}

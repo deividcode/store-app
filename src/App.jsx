@@ -1,13 +1,20 @@
-import { useState } from 'react'
+
+import { Routes, Route } from "react-router-dom";
+import HomeScreen from "./routes/HomeScreen";
+import Products from "./routes/Products";
+import GlobalProvider from "./context/GlobalProvider";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <div>      
+      <GlobalProvider>
+        <Routes>
+          <Route path="/" element={<HomeScreen />} />
+          <Route path="/products" element={<Products/>} />        
+        </Routes>      
+      </GlobalProvider>    
+    </div>
+  );
 }
 
-export default App
+export default App;
